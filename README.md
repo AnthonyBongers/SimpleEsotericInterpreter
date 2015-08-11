@@ -30,7 +30,7 @@ This program simply prints out the phrase "Hello world!" to the terminal. As you
 Memory in BrainFuck is implemented like this:
 
     #define MEMORY_LIMIT 2048
-    unsigned char *memory[MEMORY_LIMIT], *pointer = memory;
+    unsigned char memory[MEMORY_LIMIT], *pointer = memory;
     
 Since the "Turing Complete" status in BrainFuck is reliant on how much space the script has access to, the higher the MEMORY_LIMIT, the better. For this example I only set it to 2048 though. 
 
