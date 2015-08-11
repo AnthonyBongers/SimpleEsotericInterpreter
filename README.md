@@ -27,7 +27,32 @@ This program simply prints out the phrase "Hello world!" to the terminal. As you
 
 ## Memory
 
-Memory info.
+Memory in BrainFuck is implemented like this:
+
+    #define MEMORY_LIMIT 2048
+    unsigned char *memory[MEMORY_LIMIT], *pointer = memory;
+    
+Since the "Turing Complete" status in BrainFuck is reliant on how much space the script has access to, the higher the MEMORY_LIMIT, the better. For this example I only set it to 2048 though. 
+
+The working memory is a contiguous array of 8-bit addresses, although it is possible to change the address size to however many bits are needed. A pointer is set to the first element of the working memory, and this value is shifted by the '>' and '<' instructions. 
+
+Memory at the beginning of a script would be:
+
+    Pointer address : 0
+    --------------------------------
+    Memory Address | 0 | 1 | 2 | ...
+    Memory Value   | 0 | 0 | 0 | ...
+    
+After a simple program
+
+    +>++>+++
+    
+The memory would be:
+
+    Pointer address : 2
+    --------------------------------
+    Memory Address | 0 | 1 | 2 | ...
+    Memory Value   | 1 | 2 | 3 | ...
 
 ## Loops
 
