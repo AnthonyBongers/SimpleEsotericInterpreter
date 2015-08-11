@@ -35,4 +35,10 @@ Let's break down the concept of loops to something more digestable.
 
     +++[.-]
     
-This simple script sets the memory at 0 to 3, and then we hit the '[' symbol. The '[' symbol will check the value of the current space in memory, and if it is not 0, it will run the loop. Since it sees the value 3, it will run the loop which simply prints out the current value (The ASCII representation of 3 isn't visible), then will subtract from the current space in memory. When it hits the ']' command, it will bring us back to the matching '[' and determine if it will run the loop again. This loop will run when the memory at 0 is set to 3, then it will be subracted from in the loop and the loop will run again with the value 2, and once more when the value is subtracted to 1. Simple!
+This simple script sets the memory at space 0 to the value 3 with the three '+' commands.
+
+    Memory Space | 0 | 1 | 2 | ...
+    ------------------------------
+    Memory Value | 3 | 0 | 0 | ...
+
+Then we hit the '[' symbol. The '[' symbol will check the value of the current space in memory, and if it is not 0, it will run the loop. Since it sees the value 3, it will run the loop which simply prints out the current value (The ASCII representation of 3 isn't visible), then will subtract from the current space in memory. When it hits the ']' command, it will bring us back to the matching '[' and determine if it will run the loop again. This loop will run when the memory at 0 is set to 3, then it will be subracted from in the loop and the loop will run again with the value 2, and once more when the value is subtracted to 1. Simple!
