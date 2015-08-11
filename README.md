@@ -42,3 +42,21 @@ This simple script sets the memory at space 0 to the value 3 with the three '+' 
     Memory Value | 3 | 0 | 0 | ...
 
 Then we hit the '[' symbol. The '[' symbol will check the value of the current space in memory, and if it is not 0, it will run the loop. Since it sees the value 3, it will run the loop which simply prints out the current value (The ASCII representation of 3 isn't visible), then will subtract from the current space in memory. When it hits the ']' command, it will bring us back to the matching '[' and determine if it will run the loop again. This loop will run when the memory at 0 is set to 3, then it will be subracted from in the loop and the loop will run again with the value 2, and once more when the value is subtracted to 1. Simple!
+
+Now that we have a foundation for what makes a loop work in BrainFuck, let's look back at that big loop in hello.b. 
+
+    ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]
+    
+It's the same concept as the small example before! We set the memory at space 0 to the amount of loop iterations we want, and you can see that the last command in that loop is subracting the memory at 0. This loop will run 8 times until the memory at space 0 is set to the value 0.
+
+The large loop even has a nested loop inside of it, but it's the same concept. Since the outer loop is using the space at 0 for checking if it should still run, the inner loop uses the memory at space 1. We set the memory to the value 4, so the loop will run 4 times, and the last instruction of the loop is a subraction, so the loop will eventually stop. 
+
+## Common Patterns
+
+### Clear Memory Address
+
+There are many times in a script that you might want to clear the value at the current memory address. With loops, doing so is easy!
+
+    [-]
+    
+The loop will check if the value is non-zero. If it is, it will subtract from the value and return to the beginning of the loop. It will then check if the value is non-zero again, and will continue in this cycle until the value at the current address is set to the value 0.
