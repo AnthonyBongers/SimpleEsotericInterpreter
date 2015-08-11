@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 
-char memory[2048], *p = memory;
+unsigned char memory[2048], *p = memory;
 std::string code;
 
 int run(int start = 0, bool ignore = false)
