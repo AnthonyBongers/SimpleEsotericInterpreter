@@ -20,4 +20,5 @@ The 8 commands are as follows, along with their C equivalents:
 All other characters are ignored by the interpreter, allowing for inline comments without any special syntax. Just make sure your comments don't contain any reserved characters!
 
 As an example of a typical BrainFuck program, let's look at the contents of the included ./scripts/hello.b file:
+
     ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
